@@ -1,0 +1,43 @@
+package com.example.positivenoandfactorial;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        EditText editTextNum = findViewById(R.id.editTextNum);
+        Button btn = findViewById((R.id.btn));
+        TextView textViewResult = findViewById(R.id.textViewResult);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int number = Integer.parseInt(editTextNum.getText().toString());
+
+                long factorial = calculateFactorial(number);
+
+                textViewResult.setText("Factorial of " + number + "is" + factorial);
+            }
+        });
+    }
+    private long calculateFactorial(int n )
+    {
+        if (n <= 1) {
+            return 1;
+        }else {
+            return n * calculateFactorial(n - 1);
+
+        }
+    }
+}
