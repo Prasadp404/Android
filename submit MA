@@ -34,13 +34,13 @@ public class MainActivity extends AppCompatActivity {
                 String Email = email.getText().toString();
                 String DOB = dob.getText().toString();
 
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 intent.putExtra("Extra_name",Fname);
-                intent.putExtra("Extra_mnane",Mname);
-                intent.putExtra("Extra_mnane",Lname);
-                intent.putExtra("Extra_mnane",Address);
-                intent.putExtra("Extra_mnane",Email);
-                intent.putExtra("Extra_mnane",DOB);
+                intent.putExtra("Extra_mname",Mname);
+                intent.putExtra("Extra_lname",Lname);
+                intent.putExtra("Extra_address",Address);
+                intent.putExtra("Extra_email",Email);
+                intent.putExtra("Extra_dob",DOB);
 
                 startActivity(intent);
             }
