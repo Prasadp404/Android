@@ -48,3 +48,45 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+MainActivit2
+package com.example.intentthird;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class MainActivity2 extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+
+        Intent intent = getIntent();
+
+        String Fname = getIntent().getStringExtra("Fname");
+        String Mname = getIntent().getStringExtra("Mname");
+        String Lname = getIntent().getStringExtra("Lname");
+        String Address = getIntent().getStringExtra("Address");
+        String Email = getIntent().getStringExtra("email");
+        String DOB = getIntent().getStringExtra("DOB");
+
+        TextView fname = findViewById(R.id.textView);
+        fname.setText("fname: "+ Fname);
+        TextView mname = findViewById(R.id.textView2);
+        mname.setText("mname" + Mname);
+        TextView lname = findViewById(R.id.textView3);
+        lname.setText("lname" + Lname);
+        TextView address = findViewById(R.id.textView4);
+        address.setText("address" + Address);
+        TextView email = findViewById(R.id.textView5);
+        email.setText("mname" + Email);
+        TextView dob = findViewById(R.id.textViewdate);
+        dob.setText("DOB " + DOB);
+
+    }
+}
+
+
