@@ -1,21 +1,5 @@
 package com.example.setfactory;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageSwitcher;
-import android.widget.ImageView;
-import android.widget.ViewSwitcher;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         ImageSwitcher img= findViewById(R.id.imgs);
         Button btn = findViewById(R.id.button);
         Button btn2= findViewById(R.id.button2);
