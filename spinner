@@ -1,0 +1,9 @@
+Spinner spinner = findViewById(R.id.spinner);
+
+        List<String> opt = new ArrayList<>();
+        opt.add("option1");
+        opt.add("option2");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,opt);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
