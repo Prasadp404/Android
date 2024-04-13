@@ -1,0 +1,6 @@
+AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+
+        String[] suggestions = {"prasad","pund","Elliot","rio"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line,suggestions);
+        autoCompleteTextView.setAdapter(adapter);
