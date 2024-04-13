@@ -1,0 +1,20 @@
+package com.example.message;
+
+        Button btn = findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+
+            intent.putExtra("Extra_hello","Hello");
+
+            startActivity(intent);
+
+            }
+        });
+    }
+}
+MainActivity2.java
+ TextView textView = findViewById(R.id.textView);
+        String ok = getIntent().getStringExtra("Extra_hello");
+        textView.setText(ok);
